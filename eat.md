@@ -1,18 +1,17 @@
-## problem two
-### problem description
+# problem description
 求用1 * 2的多米诺骨牌覆盖n * m 的情况总数
-### Input format
+# Input format
 输入一共一行，
 第一行有两个整数，n和m。
-### Output format
+# Output format
 输出一共一行，
 表示用1 * 2的多米诺骨牌覆盖n * m 的情况总数
-### The scope of data
+# The scope of data
 for 10% data, n<=1000000,m=2
 for 30% data, n<=2^63-1,m=2
 for 50% data, n<=50,m<=5
 for 100% data, n<=2^63-1,m<=5
-### solve
+# solve
 观察数据，发现最大的有2^63-1那么大，于是显然是一个 *logn* 的做法，就是矩阵乘法。先看前%40数据，n<=1000000和n<=2^63-1的数据，m都等于2。所以就可以用矩阵求斐波那契数列的第n项。然后第二个问题，就是在n<=50,m<=5的数据范围里面。怎么办呢？用状态压缩DP，f[i][j]表示前i行第i行的状态为j，j就是一个二进制数。转移方程嘛，f[i][j]只和f[i-1][k]有关系，转移一下即可。
 
 不加矩阵快速幂的状压代码：
