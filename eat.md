@@ -64,3 +64,83 @@ int main ()
 	return 0;
 }
 ```
+
+既然要用矩阵快速幂，那么我们就需要把那几个矩阵都初始化出来.关于矩阵快速幂，我就不讲了......下面是初始化矩阵的代码
+
+```cpp
+#include <cstdio>
+#include <map>
+#include <set>
+using namespace std;
+const int N = 100, M = 5;
+int n, m, f[N][1<<M];
+bool judge (int state)
+{
+	int lianxu = 0, p = 0;
+	bool a[20];
+	for (int i = 1; i <= 10; ++i)
+		a[i] = 0;
+	while (state)
+	{
+		a[++p] = state & 1;
+		state >>= 1;
+	}
+	for (int i = 1; i <= 10; ++i)
+	{
+		if (a[i] == 1)
+			lianxu++;
+		else
+		{
+			if ((lianxu & 1) == 1)
+				return false;
+		}
+	}
+	return true;
+}
+map<int,set<int> > nb;
+bool matrix[N][N];
+int main ()
+{
+	freopen ("code.out", "w", stdout);
+	scanf ("%d %d", &n, &m);
+	if (n < m)
+		n ^= m ^= n ^= m;
+	for (int i = 0; i < (1<<m); ++i)
+		if (judge (i))
+			f[1][i] = 1;
+	for (int i = 1; i < n; ++i)
+		for (int j = 0; j < (1<<m); ++j)
+		{
+			int state = (1<<m)-1-j;
+			for (int k = 0; k < (1<<m); ++k)
+				if ((state|k) == k && judge (k-state))
+				{
+					f[i+1][k] = (f[i+1][k] + f[i][j]) % 340340;
+					nb[k].insert (j);
+					printf ("i=%d j=%d i+1=%d k=%d\n", i, j, i+1, k);
+				}
+		}
+//	printf ("%d\n", f[n][(1<<m)-1]);
+	for (map<int,set<int> >::iterator it = nb.begin (); it != nb.end (); ++it)
+		for (set<int>::iterator itit = it->second.begin (); itit != it->second.end (); ++itit)
+			matrix[(*itit)][(it->first)] = 1;
+	printf ("{");
+	for (int i = 0; i < (1<<m); ++i)
+	{
+		printf ("{");
+		for (int j = 0; j < (1<<m); ++j)
+		{
+			if (j==(1<<m)-1)
+				printf ("%d", matrix[i][j]);
+			else
+				printf ("%d,", matrix[i][j]);
+		}
+		printf ("}");
+		if (i==(1<<m)-1)
+			break;
+		printf ("\n");
+	}
+	printf ("}");
+	return 0;
+}
+```
