@@ -1,20 +1,18 @@
-# Noip Simulation match on 2019.2.22
-## problem one
-### problem description
+# problem description
 This problem is a very simple problem. Once upon a time, there was a very fat man. He wanted to find some food to eat then. He knew there was a lot of food in the end of the corridor. But there was a lot of obstacles in the corridor. He couldn't go through the obstacles easily. But he needed to go to the kitchen too. He could change his size. We can estimate 4this corridor as a plane rectangular coordinate system. We can estimate the left wall of the corridor as a line *y = 0* in the system. We can also estimate the right wall of the corridor as a line *y = m* in the system. The obstacles can be estimated as a point *(x, y)* in the system. The fat person can estimate as a circular. Now we need to now the radius of the maximum of the radium of the circular if it can went to the kitchen. 
 
-### Input format
+# Input format
 The first line of the input file are two number *n* of the obstacles and a number *m*. The mean of *m* is in the problem description. In the next *n* line, there is two number *x* and *y* every line. They are all coordinates of the obstacles. 
 
-### Output format
+# Output format
 There is only a number in the output file. Now we need to now the radius of the maximum of the radium of the circular if it can went to the kitchen. 
 
-### The scope of data
+# The scope of data
 for 30% data, n<=30
 for 60% data, n<=1000
 for 100% data, n<=3000
 
-### solve
+# solve
 My English is so bad, so I need to write the solution in Chinese
 考试的时候这道题其实已经想出来了qwq.
 这道题最容易想到的就是二分.二分最大的直径，然后我们把所有的使得直径为这个数的两个点用并查集合并.把上界*y=0*和*y=m*都想成一个点，设这两个点的编号是*n+1*和*n+2*,如果一个在走廊内部的点和*n+1*距离比*m*小的话，那么就把那个点和*n+1*用并查集合并，当上界和下界都连成一气的时候圆就过不去了.复杂度 *O((n^2)logn)* 但是不知道为什么过不去......可能是多了个*log*.然后关于正解......我们把所有边都加入，然后我们发现肯定是过得了距离大的两对点，过不了距离小的两个点.所以我们可以把任意两个点连一条边，然后排序.我们把边按从小到大的顺序加入，有边的两个点是那个球通过不了的.直到上界和下界可以互相到达，这样的话球就过不了墙了.答案就是最后加的那条边的权值......但是依旧过不了......所以题解就过不了了？！然而并不是，我们发现最有这里的问题就相当于求一个所有生成树中的最大边最小......不不不，是相当于求能把上界和下界连起来的所有边中的最大值最小，然后我们的方法就相当于kruskal算法，复杂度是 O((n^2)logn)，因为中间需要排序......
@@ -306,72 +304,6 @@ int main ()
 					_Dist[i] = matrix[now][i];
 	}
 	printf ("%.2lf\n", ans/2);
-	return 0;
-}
-```
-## problem two
-### problem description
-求用1 * 2的多米诺骨牌覆盖n * m 的情况总数
-### Input format
-输入一共一行，
-第一行有两个整数，n和m。
-### Output format
-输出一共一行，
-表示用1 * 2的多米诺骨牌覆盖n * m 的情况总数
-### The scope of data
-for 10% data, n<=1000000,m=2
-for 30% data, n<=2^63-1,m=2
-for 50% data, n<=50,m<=5
-for 100% data, n<=2^63-1,m<=5
-### solve
-观察数据，发现最大的有2^63-1那么大，于是显然是一个 *logn* 的做法，就是矩阵乘法。先看前%40数据，n<=1000000和n<=2^63-1的数据，m都等于2。所以就可以用矩阵求斐波那契数列的第n项。然后第二个问题，就是在n<=50,m<=5的数据范围里面。怎么办呢？用状态压缩DP，f[i][j]表示前i行第i行的状态为j，j就是一个二进制数。转移方程嘛，f[i][j]只和f[i-1][k]有关系，转移一下即可。
-
-不加矩阵快速幂的状压代码：
-```cpp
-#include <cstdio>
-using namespace std;
-const int N = 100, M = 5;
-int n, m, f[N][1<<M];
-bool judge (int state)
-{
-	int lianxu = 0, p = 0;
-	bool a[20];
-	for (int i = 1; i <= 10; ++i)
-		a[i] = 0;
-	while (state)
-	{
-		a[++p] = state & 1;
-		state >>= 1;
-	}
-	for (int i = 1; i <= 10; ++i)
-	{
-		if (a[i] == 1)
-			lianxu++;
-		else
-		{
-			if ((lianxu & 1) == 1)
-				return false;
-		}
-	}
-	return true;
-}
-int main ()
-{
-	scanf ("%d %d", &n, &m);
-	if (n < m)
-		n ^= m ^= n ^= m;
-	for (int i = 0; i < (1<<m); ++i)
-		if (judge (i))
-			f[1][i] = 1;
-	for (int i = 1; i <= n-1; ++i)
-		for (int j = 0; j < (1<<m); ++j)
-		{
-			int state = (1<<m)-1-j;
-			for (int k = 0; k < (1<<m); ++k)
-				if ((state|k) == k && judge (k-state))
-					f[i+1][k] = (f[i+1][k] + f[i][j]) % 340340;
-		}
-	printf ("%d\n", f[n][(1<<m)-1]);
 	return 0;
 }
 ```
