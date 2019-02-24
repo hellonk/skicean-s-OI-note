@@ -310,3 +310,5 @@ int main ()
 }
 ```
 ### problem two
+#### problem description
+求用1 * 2的多米诺骨牌覆盖n * m 的情况总数
