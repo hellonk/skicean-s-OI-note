@@ -1,4 +1,4 @@
-# problem description
+# Problem description
 求用1 * 2的多米诺骨牌覆盖n * m 的情况总数
 # Input format
 输入一共一行，
