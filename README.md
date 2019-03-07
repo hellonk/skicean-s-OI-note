@@ -39,7 +39,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 # OI
 > ## 基本算法
 >> ### 二分
->>
+>>> [Looking for food](https://github.com/hellonk/hellonk.github.io/blob/master/Looking%20for%20food.md)
 > ## 图论
 >> ### 最小生成树
 > ## 动态规划
