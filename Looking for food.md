@@ -1,16 +1,5 @@
-# problem description
-This problem is a very simple problem. Once upon a time, there was a very fat man. He wanted to find some food to eat then. He knew there was a lot of food in the end of the corridor. But there was a lot of obstacles in the corridor. He couldn't go through the obstacles easily. But he needed to go to the kitchen too. He could change his size. We can estimate 4this corridor as a plane rectangular coordinate system. We can estimate the left wall of the corridor as a line *y = 0* in the system. We can also estimate the right wall of the corridor as a line *y = m* in the system. The obstacles can be estimated as a point *(x, y)* in the system. The fat person can estimate as a circular. Now we need to now the radius of the maximum of the radium of the circular if it can went to the kitchen. 
-
-# Input format
-The first line of the input file are two number *n* of the obstacles and a number *m*. The mean of *m* is in the problem description. In the next *n* line, there is two number *x* and *y* every line. They are all coordinates of the obstacles. 
-
-# Output format
-There is only a number in the output file. Now we need to now the radius of the maximum of the radium of the circular if it can went to the kitchen. 
-
-# The scope of data
-for 30% data, n<=30
-for 60% data, n<=1000
-for 100% data, n<=3000
+# problem
+![image](https://github.com/hellonk/hellonk.github.io/blob/master/problem_1147_7f9476c07e337f99ca8a2cfce2dbd8f0.jpg)
 
 # solve
 My English is so bad, so I need to write the solution in Chinese
