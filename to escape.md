@@ -1,5 +1,5 @@
 # Problem
-![image](https://github.com/hellonk/hellonk.github.io/blob/master/problem_1147_7f9476c07e337f99ca8a2cfce2dbd8f0.jpg)
+![image](https://github.com/hellonk/hellonk.github.io/blob/master/problem_1149_5af01b59f55ebd57d9463745a1e3eec1.jpg)
 # Solution
 肯定可以DP，因为只能从上层往下层走，所以一定没有后效性。
 关键问题就在于如何求出第*i*块木板可以往那一块木板上跳
