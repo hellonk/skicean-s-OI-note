@@ -42,10 +42,14 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 >>> [Looking for food](https://github.com/hellonk/hellonk.github.io/blob/master/Looking%20for%20food.md)
 > ## 图论
 >> ### 最小生成树
+>>> [Looking for food](https://github.com/hellonk/hellonk.github.io/blob/master/Looking%20for%20food.md)
 > ## 动态规划
 >> ### 简单的动态规划
+>>> [to escape](https://github.com/hellonk/hellonk.github.io/blob/master/to%20escape.md)
 >> ### 状态压缩
+>>> [eat](https://github.com/hellonk/hellonk.github.io/blob/master/eat.md)
 > ## 数学
 >> ### 矩阵快速幂
 > ## 数据结构
 >> ### 线段树
+>>> [to escape](https://github.com/hellonk/hellonk.github.io/blob/master/to%20escape.md)
