@@ -50,6 +50,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 >>> [eat](https://github.com/hellonk/hellonk.github.io/blob/master/eat.md)
 > ## 数学
 >> ### 矩阵快速幂
+>>> [eat](https://github.com/hellonk/hellonk.github.io/blob/master/eat.md)
 > ## 数据结构
 >> ### 线段树
 >>> [to escape](https://github.com/hellonk/hellonk.github.io/blob/master/to%20escape.md)
