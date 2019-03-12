@@ -40,6 +40,9 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 > ## 基本算法
 >> ### 二分
 >>> [Looking for food](https://github.com/hellonk/hellonk.github.io/blob/master/Looking%20for%20food.md)
+>> ### 贪心
+>> ### 排序，前缀和等简单算法
+>>> [doubt](https://github.com/hellonk/hellonk.github.io/blob/master/doubt.md)
 > ## 图论
 >> ### 最小生成树
 >>> [Looking for food](https://github.com/hellonk/hellonk.github.io/blob/master/Looking%20for%20food.md)
