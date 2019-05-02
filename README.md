@@ -28,3 +28,4 @@
 > ## 高精度
 >> ### 普通高精度
 >>> [LBX数列](https://github.com/hellonk/hellonk.github.io/blob/master/LBX数列.md)
+>>> [加减法](http://124.205.120.153/problem/1196)
