@@ -31,4 +31,4 @@
 >>> [加减法](http://124.205.120.153/problem/1196)
 > ## 字符串算法
 >> ### KMP算法
->>> [动物园]()
+>>> [动物园](https://github.com/hellonk/hellonk.github.io/blob/master/动物园.md)
