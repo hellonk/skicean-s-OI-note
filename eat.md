@@ -1,5 +1,6 @@
 # Problem description
 求用1 * 2的多米诺骨牌覆盖n * m 的情况总数
+[题目叙述](http://124.205.120.153/problem/1148)
 # Input format
 输入一共一行，
 第一行有两个整数，n和m。
