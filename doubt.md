@@ -1,5 +1,5 @@
 # problem
-![image](https://github.com/hellonk/hellonk.github.io/blob/master/problem_1162_92ee95a663e4db1741fc590a3f13c11f.jpg)
+[题目叙述](http://124.205.120.153/problem/1162)
 # solution
 我们发现每一个可能成为吸其他小卖部的地方的地方只有可能是在小卖部的x轴和y轴的交点的地方，或者小卖部本身。
 枚举所有交点。然后把每个点距离其他小卖部的距离计算出来。排序，然后求出来吸走最小的k个小卖部总小号是多少。就是求前缀和。
