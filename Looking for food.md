@@ -1,5 +1,5 @@
 # problem
-![image](https://github.com/hellonk/hellonk.github.io/blob/master/problem_1147_7f9476c07e337f99ca8a2cfce2dbd8f0.jpg)
+[题目叙述](http://124.205.120.153/problem/1147)
 
 # solve
 考试的时候这道题其实已经想出来了qwq.
