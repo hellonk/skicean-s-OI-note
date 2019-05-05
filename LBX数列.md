@@ -1,5 +1,5 @@
 # Problem
-![image](https://github.com/hellonk/hellonk.github.io/blob/master/problem_1143_6017969dce408ef57d4323fb2064c6c3.jpg)
+[题目叙述](http://124.205.120.153/problem/1143)
 # Solve
 > ## 20分
 > 我考试的时候想出来的方法就是一个很显然的dp
