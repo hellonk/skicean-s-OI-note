@@ -3,7 +3,7 @@
 >> ### 二分
 >>> [Looking for food](https://github.com/hellonk/hellonk.github.io/blob/master/Looking%20for%20food.md)
 >> ### 贪心
->>> [任务]()
+>>> [任务](https://github.com/hellonk/hellonk.github.io/blob/master/任务.md)
 >> ### 排序，前缀和等简单算法
 >>> [doubt](https://github.com/hellonk/hellonk.github.io/blob/master/doubt.md)
 > ## 图论
