@@ -21,8 +21,9 @@
 >> ### 组合数
 >>> [LBX数列](https://github.com/hellonk/hellonk.github.io/blob/master/LBX数列.md)
 > ## 数据结构
->> ### 线段树
+>> ### 线段树 and 树状数组
 >>> [to escape](https://github.com/hellonk/hellonk.github.io/blob/master/to%20escape.md)
+>>> [补给站](https://github.com/hellonk/hellonk.github.io/blob/master/补给站.md)
 > ## 网络流
 >> ### 最大流
 >>> [方格取数](https://github.com/hellonk/hellonk.github.io/blob/master/方格取数.md)
